@@ -1,9 +1,10 @@
 <h1>Confirm Post</h1>
-<%= form_with(model:@blog, local:true, url:blogs_path )do |f|>
+<%= form_with(model:@blog, local:true, url:blogs_path )do |f|%>
     <%= f.hidden_field :content %>
     <%= f.hidden_field :image %>
+    <p><%= @blog.content %></p>
     <%= image_tag(@blog.image.url) if @blog.image && @blog.image.url %>
-    <%= f.hidden_field :image_cache %>
+    <%= f.hidden_field :image_cache %>    
     <%= f.submit "Post" %>
-    <%= f.submit "Back", name = "back" %>
+    <%= f.submit "Back", name: "back" %>
 <% end %>

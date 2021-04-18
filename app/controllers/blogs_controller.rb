@@ -8,10 +8,10 @@ class BlogsController < ApplicationController
   end
   def create
     if params[:back]
-      @blog = Blog.new(blog_params)
+      @blog = current_user.blogs.build(blog_params)
       render :new
     else
-      @blog = Blog.create(blog_params)
+      @blog = current_user.blogs.build(blog_params)
       if @blog.save
         redirect_to blogs_path, notice: "Post Created"
       else
@@ -28,10 +28,10 @@ class BlogsController < ApplicationController
       redirect_to blogs_path, notice: "Post Edited"
     else
       render :edit
-    end    
+    end
   end
   def confirm
-    @blog = Blog.new(blog_params)
+    @blog = current_user.blogs.build(blog_params)
     render :new if @blog.invalid?
   end
   def destroy

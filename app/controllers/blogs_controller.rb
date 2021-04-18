@@ -19,6 +19,10 @@ class BlogsController < ApplicationController
       end
     end
   end
+  def confirm
+    @blog = Blog.new(blog_params)
+    render :new if @blog.invalid?
+  end
   private
   def set_blog
     @blog = Blog.find(params[:id])

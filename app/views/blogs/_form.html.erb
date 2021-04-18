@@ -1,0 +1,11 @@
+<%= form_with(model:@blog, local:true, url: )do |f|>
+  <div>
+    <%= f.label :content %>
+    <%= f.text_field :content %>
+  </div>
+  <div>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+    <%= f.submit "Post" %>
+<% end %>

@@ -1,8 +1,15 @@
-<h1>Facebook Clone Log In</h1>
+<div class="login_form" align="center">
+<h1>facebook Clone</h1>
 <%= form_with(scope: :session, url:sessions_path, local:true) do |f| %>
-  <%= f.label :email %>
-  <%= f.email_field :email %>
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-  <%= f.submit "Log in" %>
+  <%= f.email_field :email, class: "input_field", placeholder: "Email"%><br>
+  <%= f.password_field :password,class: "input_field", placeholder: "Password" %><br>
+  <%= f.submit "Log In", class: "login_buttom"%>
 <% end %>
+<% if logged_in? %>
+  <%= link_to "Logout", session_path(current_user.id), method: :delete %>
+<% else %>
+  <span class="label label-success">
+    <%= link_to "Create New Account", new_user_path, class: "new_acc_btn" %>
+  </span>
+<% end %>
+</div>

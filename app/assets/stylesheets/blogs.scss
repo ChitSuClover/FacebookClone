@@ -1,3 +1,56 @@
-// Place all the styles related to the blogs controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.home_div{
+  background-color: #fff;
+  width:800px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100%;
+}
+#home{
+  display: block;
+  font-size:40px;
+  text-align: center;
+  padding: 10px;
+  color: gray;
+}
+.create_post{
+  display: block;
+  border-radius: 50px;
+  background-color: #E7E7E4;
+  padding: 10px 20px;
+  text-decoration: none;
+  color:gray;
+  margin: 10px;
+}
+.create_post:hover{
+  text-decoration: none;
+  color:#5E5E5A;
+}
+.content{
+  background-color: #E7E7E4;
+  font-family: monospace;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.one_blog
+{
+  background-color: #C0C0C0;
+  margin: 20px;
+  border-radius: 10px;
+}
+.image_style{
+  height: 200px;
+  width: auto;
+}
+p{
+  padding: 5px 20px;
+  margin: 0px;
+}
+.links{
+  color: #000;
+  text-decoration: none;
+}
+.links:hover{
+  color: #5E5E5A;
+  text-decoration: none;
+}

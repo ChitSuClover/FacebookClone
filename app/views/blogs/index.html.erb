@@ -1,17 +1,18 @@
-<h1>Home</h1>
-
-<table>
-<% @blogs.each do |blog| %>
-  <tr><td><%= blog.user.name %></td></tr>
-  <tr><td><%= blog.content %></td></tr>
-  <tr><td><%= image_tag blog.image.url %></td></tr>
-  <tr>
-    <td><%= link_to 'Detail', blog_path(blog.id)%>
-        <%= link_to 'Edit', edit_blog_path(blog.id), data: {confirm: "Are you sure you want to edit?"}%>
-        <%= link_to 'Delete', blog_path(blog.id), method: :delete, data: {confirm: "Are you sure you want to delete?"}%>
-    </td>
-  </tr>
-<% end %>
-</table>
-<br>
-<%= link_to 'Create Post', new_blog_path%>
+<div class="home_div">
+<span class="glyphicon glyphicon-home" id="home"></span>
+<%= link_to 'Create Post', new_blog_path, class: "create_post"%>
+<div class="content">
+  <% @blogs.each do |blog| %>
+  <div class="one_blog">
+    <p><%= blog.user.name%></p>
+    <p><%= blog.content %></p>
+    <%= image_tag blog.image.url, class:"image_style" %>
+    <br>
+    <p>
+    <%= link_to 'Detail', blog_path(blog.id), class:"links"%>
+    <%= link_to 'Edit', edit_blog_path(blog.id), data: {confirm: "Are you sure you want to edit?"}, class:"links"%>
+    <%= link_to 'Delete', blog_path(blog.id), method: :delete, data: {confirm: "Are you sure you want to delete?"}, class:"links"%>
+    </p>
+    </div>
+  <% end %>
+</div>

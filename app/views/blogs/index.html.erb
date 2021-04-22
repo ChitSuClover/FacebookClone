@@ -5,7 +5,7 @@
   <% @blogs.each do |blog| %>
   <div class="one_blog">
     <p><%= blog.user.name%></p>
-    <p><%= blog.content %></p>
+    <p style="white-space:pre-wrap"><%= blog.content%></p>
     <%= image_tag blog.image.url, class:"image_style" %>
     <br>
     <p>

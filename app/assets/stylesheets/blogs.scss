@@ -31,6 +31,7 @@
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  height: auto !important;
 }
 .one_blog
 {
@@ -45,6 +46,7 @@
 p{
   padding: 5px 20px;
   margin: 0px;
+  overflow: hidden;
 }
 .links{
   color: #000;

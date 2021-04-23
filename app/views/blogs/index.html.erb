@@ -6,7 +6,7 @@
   <div class="one_blog">
     <p><%= blog.user.name%></p>
     <p style="white-space:pre-wrap"><%= blog.content%></p>
-    <%= image_tag blog.image.url, class:"image_style" %>
+    <%= image_tag blog.image.url, class:"image_style"%>
     <br>
     <p>
       <%= link_to 'Detail', blog_path(blog.id), class:"links"%>
